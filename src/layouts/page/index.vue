@@ -21,13 +21,10 @@
       </transition>
     </template>
   </RouterView>
-  <FrameLayout v-if="getCanEmbedIFramePage" />
 </template>
 
 <script lang="ts">
   import { computed, defineComponent, unref } from 'vue';
-
-  import FrameLayout from '/@/layouts/iframe/index.vue';
 
   import { useRootSetting } from '/@/hooks/setting/useRootSetting';
 
@@ -39,7 +36,7 @@
 
   export default defineComponent({
     name: 'PageLayout',
-    components: { FrameLayout },
+    components: {},
     setup() {
       const { getShowMultipleTab } = useMultipleTabSetting();
       const tabStore = useMultipleTabStore();
